@@ -10,6 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/hotels")
 public class HotelController {
+
     private final HotelService service;
 
     public HotelController(HotelService service) {
@@ -18,7 +19,7 @@ public class HotelController {
 
     @PostMapping
     public Hotel createHotel(@RequestBody Hotel hotel) {
-        return service.addHotel(hotel);
+        return service.saveHotel(hotel);
     }
 
     @GetMapping
